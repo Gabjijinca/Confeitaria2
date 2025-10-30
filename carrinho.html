@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho | Confeitaria Camila Ferreira</title>
+    
+    <link rel="stylesheet" href="../Confeitaria/CSS/style.css"> 
+    <link rel="stylesheet" href="../Confeitaria/CSS/carrinho.css"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <audio id="background-audio" loop autoplay muted>
+        <source src="../Confeitaria/MUSICAS/en-resa-genom-vasttrafiks-fonster-jazz-bgm-254221.mp3" type="audio/mp3">
+    </audio>
+    <button id="toggle-audio-btn" aria-label="Ligar/Desligar Música">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo-link">
+                <img src="../Confeitaria/FOTOS/LOGO1.png" alt="Logo Camila Ferreira Confeitaria" class="logo-img">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personalizar.html">Personalizar</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="carrinho.html" class="carrinho-link">
+                    <i class="fas fa-shopping-cart carrinho-icon"></i></a></li>
+            </ul>
+        </nav>
+        
+        <button id="accessibility-btn" aria-label="Menu de Acessibilidade">
+            <i class="fas fa-wheelchair"></i>
+        </button>
+        
+        <aside id="accessibility-sidebar">
+            <h4>Opções de Acessibilidade</h4>
+            <button id="close-sidebar-btn" aria-label="Fechar menu">X</button>
+            <div class="acessibility-options">
+                <button class="acessibility-option-btn" data-action="contrast" aria-label="Alto Contraste"><i class="fas fa-adjust"></i> Alto Contraste</button>
+                <button class="acessibility-option-btn" data-action="font-size-up" aria-label="Aumentar Fonte"><i class="fas fa-plus"></i> Aumentar Fonte</button>
+                <button class="acessibility-option-btn" data-action="font-size-down" aria-label="Diminuir Fonte"><i class="fas fa-minus"></i> Diminuir Fonte</button>
+                <button class="acessibility-option-btn" data-action="grayscale" aria-label="Escala de Cinza"><i class="fas fa-tint-slash"></i> Preto e Branco</button>
+                <button class="acessibility-option-btn" data-action="speech" aria-label="Ativar Leitura por Voz"><i class="fas fa-volume-up"></i> Leitura por Voz</button>
+            </div>
+        </aside>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <header class="page-header">
+                <h1>Seu Carrinho de Compras</h1>
+                <p>Revise seus produtos gourmet antes de finalizar a encomenda.</p><br>
+            </header>
+
+            <section class="cart-content">
+                
+                <div class="cart-items-container">
+                    <table id="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Preço Unit.</th>
+                                <th>Quantidade</th>
+                                <th>Total</th>
+                                <th>Remover</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-body">
+                            <tr class="cart-empty-message">
+                                <td colspan="5">Seu carrinho está vazio. <a href="catalogo.html">Adicione produtos!</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cart-summary-container">
+                    <div class="summary-box">
+                        <h2>Resumo do Pedido</h2>
+                        
+                        <div class="summary-line">
+                            <span>Subtotal:</span>
+                            <span id="subtotal-value">R$ 0,00</span>
+                        </div>
+                        
+                        <div class="summary-line">
+                            <span>Frete (A calcular):</span>
+                            <span id="shipping-value">R$ 0,00</span>
+                        </div>
+                        
+                        <div class="summary-total">
+                            <span>Total Geral:</span>
+                            <span id="total-value">R$ 0,00</span>
+                        </div>
+                        
+                        <button id="checkout-btn" class="btn btn-primary" disabled>
+                            Finalizar Encomenda
+                        </button>
+                        
+                        <p class="checkout-message">Atenção: A personalização e agendamento de entrega serão concluídos na próxima etapa.</p>
+                    </div>
+                </div>
+
+            </section>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://wa.me/5511995553312" target="_blank" aria-label="WhatsApp Camila Ferreira">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/confeitariacamilaferreira" target="_blank" aria-label="Instagram Camila Ferreira">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; 2023 Confeitaria Camila Ferreira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <a href="#" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../Confeitaria/JS/script.js"></script>
+    <script src="../Confeitaria/JS/carrinho.js"></script> 
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>

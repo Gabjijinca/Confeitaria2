@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confeitaria Camila Ferreira</title>
+    <link rel="stylesheet" href="../Confeitaria/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+     <audio id="background-audio" loop autoplay muted>
+        <source src="../Confeitaria/MUSICAS/en-resa-genom-vasttrafiks-fonster-jazz-bgm-254221.mp3" type="audio/mp3">
+    </audio>
+
+    <button id="toggle-audio-btn" aria-label="Ligar/Desligar Música">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo-link">
+                <img src="../Confeitaria/FOTOS/LOGO1.png" alt="Logo Camila Ferreira Confeitaria" class="logo-img">
+            </a>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personalizar.html">Personalizar</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="carrinho.html" class="carrinho-link">
+                    <i class="fas fa-shopping-cart carrinho-icon"></i></a></li>
+            </ul>
+        </nav>
+
+    <header>
+        
+        <button id="accessibility-btn" aria-label="Menu de Acessibilidade">
+            <i class="fas fa-wheelchair"></i>
+        </button>
+        
+        <aside id="accessibility-sidebar">
+    <h4>Opções de Acessibilidade</h4>
+    <button id="close-sidebar-btn" aria-label="Fechar menu">X</button>
+    
+    <div class="acessibility-options">
+        
+        <button class="acessibility-option-btn" data-action="contrast" aria-label="Alto Contraste">
+            <i class="fas fa-adjust"></i> Alto Contraste
+        </button>
+
+        <button class="acessibility-option-btn" data-action="font-size-up" aria-label="Aumentar Fonte">
+            <i class="fas fa-plus"></i> Aumentar Fonte
+        </button>
+
+        <button class="acessibility-option-btn" data-action="font-size-down" aria-label="Diminuir Fonte">
+            <i class="fas fa-minus"></i> Diminuir Fonte
+        </button>
+
+        <button class="acessibility-option-btn" data-action="grayscale" aria-label="Escala de Cinza">
+            <i class="fas fa-tint-slash"></i> Preto e Branco
+        </button>
+
+        <button class="acessibility-option-btn" data-action="speech" aria-label="Ativar Leitura por Voz">
+            <i class="fas fa-volume-up"></i> Leitura por Voz
+        </button>
+
+    </div>
+</aside>
+    </header>
+
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="slideshow-container">
+             
+                <div class="mySlides fade" aria-label="Foto de um bolo de casamento">
+                    </div>
+
+                <div class="mySlides fade" aria-label="Foto de um bolo de casamento">
+                    </div>
+                
+                <div class="mySlides fade" aria-label="Foto de um bolo de casamento">
+                    </div>
+
+                <div class="hero-content">
+                    <h1>Confeitaria <br> Camila Ferreira</h1>
+                    <p>Doces Gourmet Artesanais</p>
+                    <a href="#encomende-agora" class="btn">Encomende Agora</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+        
+            <a href="catalogo.html" class="feature-link"> 
+            <div class="feature-item">
+                <i class="fas fa-birthday-cake icon-feature"></i> 
+                <h3>Catálogo de Produtos</h3>
+            </div>
+            </a>
+
+            <a href="checkout.html" class="feature-link">
+            <div class="feature-item">
+                <i class="fas fa-calendar-alt icon-feature"></i>
+                <h3>Agende sua Entrega</h3>
+            </div>
+            </a>
+
+            <a href="checkout.html" class="feature-link">
+            <div class="feature-item">
+                <i class="fas fa-credit-card icon-feature"></i>
+                <h3>Pagamento Seguro</h3>
+            </div>
+            </a>
+            </div>
+        </section>
+
+        <section class="products-preview">
+        <div class="container">
+            
+            <div class="products-header">
+                <h2>Nossas Especialidades Gourmet</h2>
+                <p>Conheça a qualidade e o toque artesanal da Camila Ferreira em nossos doces mais amados. Sabores sofisticados, perfeitos para presentear ou celebrar.</p>
+            </div>
+            
+            <div class="products-grid"> 
+    
+    <a href="catalogo.html#bolos" class="product-link">
+        <div class="product-card">
+            <img src="../Confeitaria/FOTOS/BOLO1.png" alt="Um elegante bolo Red Velvet com suas cores vibrantes e uma cobertura cremosa de cream cheese, simples e chique.">
+            <div class="product-info">
+                <h3>Bolo Red Velvet com Cobertura de Cream Cheese</h3>
+                <p class="product-description">Um elegante bolo Red Velvet com suas cores vibrantes e uma cobertura cremosa de cream cheese, simples e chique.</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="catalogo.html#doces-classicos" class="product-link">
+        <div class="product-card">
+            <img src="../Confeitaria/FOTOS/DOCE1.png" alt=" Uma torre delicada de macarons coloridos em sabores variados, apresentados em um prato de porcelana fina.">
+            <div class="product-info">
+                <h3>Macarons com diversos sabores naturais </h3>
+                <p class="product-description">Uma torre delicada de macarons coloridos em sabores variados, apresentados em um prato de porcelana fina.</p>
+            </div>
+        </div>
+    </a>
+
+    <a href="catalogo.html#sobremesas" class="product-link">
+        <div class="product-card">
+            <img src="../Confeitaria/FOTOS/PAVE2.png" alt="Um pavê caprichosamente preparado em belas camadas de chocolate com crocane de avelã.">
+            <div class="product-info">
+                <h3>Pavê de Chocolate com Crocante de Avelã</h3>
+                <p class="product-description">Um pavê caprichosamente preparado em belas camadas de chocolate com crocane de avelã.</p>
+            </div>
+        </div>
+    </a>
+    
+</div>
+        
+        </div>
+        </section>
+        
+        <section class="testimonials-section">
+            <div class="container">
+                <h2>O que dizem os nossos clientes</h2>
+                <div class="testimonial-grid">
+                    
+                    <div class="testimonial-card">
+                        <p class="quote">"O bolo de casamento superou todas as expectativas! Sabor inesquecível e um design perfeito. A Camila é uma verdadeira artista."</p>
+                        <p class="client-name">- Lúcia S.</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="quote">"Os macarons são os melhores que já comi. Frescos e crocantes, a cada mordida uma surpresa deliciosa. Recomendo muito!"</p>
+                        <p class="client-name">- Fernando M.</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="quote">"Servi o pavê no Natal e foi sucesso absoluto! Recebi elogios de todos os convidados. Entrega pontual e embalagem impecável."</p>
+                        <p class="client-name">- Ana B.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="instagram-section">
+    <div class="container">
+        <h2>Siga-nos no Instagram | @CamilaFerreiraGourmet</h2>
+        <p>Veja os bastidores, novidades e bolos personalizados que saíram da nossa cozinha!</p>
+        
+        <div id="instagram-feed-widget">
+            <div class="placeholder-feed-simulacao">
+
+                <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+          <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-2eb0e523-ac18-430b-be7d-eb040ece73b6" data-elfsight-app-lazy></div>
+
+
+            </div>
+        </div>
+        
+        <a href="https://instagram.com/confeitariacamilaferreira" target="_blank" class="btn btn-secondary">
+            Ver Perfil Completo <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</section>
+
+
+        </main>
+
+    <footer>
+    <div class="container">
+        <div class="social-icons">
+            <a href="https://wa.me/5511995553312" target="_blank" aria-label="WhatsApp Camila Ferreira">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+            <a href="https://instagram.com/confeitariacamilaferreira" target="_blank" aria-label="Instagram Camila Ferreira">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <p>&copy; 2023 Confeitaria Camila Ferreira. Todos os direitos reservados.</p>
+    </div>
+    </footer>
+    
+    <a href="#" id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+    </a>
+    <script src="../Confeitaria/JS/script.js"></script>
+
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>

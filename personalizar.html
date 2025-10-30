@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalize seu Pedido | Confeitaria Camila Ferreira</title>
+    
+    <link rel="stylesheet" href="../Confeitaria/CSS/style.css"> 
+    <link rel="stylesheet" href="../Confeitaria/CSS/personalizar.css"> 
+        <link rel="stylesheet" href="../Confeitaria/CSS/catalogo.css"> 
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <audio id="background-audio" loop autoplay muted>
+        <source src="../Confeitaria/MUSICAS/en-resa-genom-vasttrafiks-fonster-jazz-bgm-254221.mp3" type="audio/mp3">
+    </audio>
+    <button id="toggle-audio-btn" aria-label="Ligar/Desligar Música">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo-link">
+                <img src="../Confeitaria/FOTOS/LOGO1.png" alt="Logo Camila Ferreira Confeitaria" class="logo-img">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personalizar.html">Personalizar</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="carrinho.html" class="carrinho-link">
+                    <i class="fas fa-shopping-cart carrinho-icon"></i></a></li>
+            </ul>
+        </nav>
+        
+        <button id="accessibility-btn" aria-label="Menu de Acessibilidade">
+            <i class="fas fa-wheelchair"></i>
+        </button>
+        
+        <aside id="accessibility-sidebar">
+            <h4>Opções de Acessibilidade</h4>
+            <button id="close-sidebar-btn" aria-label="Fechar menu">X</button>
+            <div class="acessibility-options">
+                <button class="acessibility-option-btn" data-action="contrast" aria-label="Alto Contraste"><i class="fas fa-adjust"></i> Alto Contraste</button>
+                <button class="acessibility-option-btn" data-action="font-size-up" aria-label="Aumentar Fonte"><i class="fas fa-plus"></i> Aumentar Fonte</button>
+                <button class="acessibility-option-btn" data-action="font-size-down" aria-label="Diminuir Fonte"><i class="fas fa-minus"></i> Diminuir Fonte</button>
+                <button class="acessibility-option-btn" data-action="grayscale" aria-label="Escala de Cinza"><i class="fas fa-tint-slash"></i> Preto e Branco</button>
+                <button class="acessibility-option-btn" data-action="speech" aria-label="Ativar Leitura por Voz"><i class="fas fa-volume-up"></i> Leitura por Voz</button>
+            </div>
+        </aside>
+    </header>
+    
+    <main>
+        <div class="container">
+            
+            <header class="page-header">
+                <h1>Personalize seu pedido</h1>
+                <p>Use nosso sistema de personalização e monte bolos, doces finos e sobremesas que atendem exatamente ao seu paladar e evento.</p>
+            <br>
+            </header>
+            
+            <nav class="quick-nav">
+                <a href="#bolo-personalizado">Bolos</a>
+                <a href="#doces-personalizados">Doces</a>
+                <a href="#sobremesas-caseiras">Sobremesas</a>
+            </nav>
+            
+            <section class="personalization-section" id="bolo-personalizado">
+                <h2>1. Personalize Seu Bolo</h2>
+                <div class="personalization-grid">
+                    
+                    <div class="image-stack">
+                        <img src="../Confeitaria/FOTOS/PERSO1.png" alt="Camada de massa de bolo." class="layer-img">
+                        <p class="image-caption">O bolo será montado com suas escolhas.</p>
+                    </div>
+
+                    <div class="selection-box" data-product-type="bolo">
+                        <label for="tamanho-bolo">Tamanho (1 a 5 kg):</label>
+                        <select id="tamanho-bolo" required>
+                            <option value="">Selecione o tamanho</option>
+                            <option value="1">1 Kg</option>
+                            <option value="2">2 Kg</option>
+                            <option value="3">3 Kg</option>
+                            <option value="4">4 Kg</option>
+                            <option value="5">5 Kg</option>
+                        </select>
+
+                        <label for="massa-bolo">Massa do Bolo:</label>
+                        <select id="massa-bolo" required>
+                            <option value="">Selecione a massa</option>
+                            <option value="Baunilha">Baunilha Clássica</option>
+                            <option value="Chocolate">Chocolate Belga</option>
+                            <option value="RedVelvet">Red Velvet</option>
+                            <option value="Nozes">Nozes</option>
+                            <option value="Cenoura">Cenoura</option>
+                            <option value="Limão">Limão Siciliano</option>
+                            <option value="Coco">Coco</option>
+                        </select>
+                        
+                        <label for="recheio-bolo">Recheio:</label>
+                        <select id="recheio-bolo" required>
+                            <option value="">Selecione o recheio</option>
+                            <option value="Brigadeiro">Brigadeiro Gourmet</option>
+                            <option value="CreamCheese">Cream Cheese</option>
+                            <option value="Frutas">Creme de Frutas Vermelhas</option>
+                            <option value="Coco">Coco</option>
+                            <option value="Pistache">Pistache</option>
+                            <option value="DoceLeite">Doce de Leite</option>
+                        </select>
+                        
+                        <label for="cobertura-bolo">Cobertura:</label>
+                        <select id="cobertura-bolo" required>
+                            <option value="">Selecione a cobertura</option>
+                            <option value="Glacê">Glacê Real</option>
+                            <option value="Chantilly">Chantilly Estabilizado</option>
+                            <option value="Pasta">Pasta Americana</option>
+                            <option value="Ganache">Ganache de Chocolate</option>
+                            <option value="Buttercream">Buttercream</option>
+                        </select>
+                        
+                        <label for="quantidade-bolo">Quantidade:</label>
+                        <input type="number" id="quantidade-bolo" min="1" max="5" value="1" required>
+                        
+                        <div class="price-display">
+                            <span>Preço Estimado:</span>
+                            <span id="price-bolo" class="calculated-price">R$ 0,00</span>
+                        </div>
+
+                        <button class="btn btn-carrinho" id="add-bolo-carrinho" disabled>Adicionar Bolo ao Carrinho</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="personalization-section" id="doces-personalizados">
+                <h2>2. Monte sua Caixa de Doces Finos</h2>
+                <div class="personalization-grid">
+                    <div class="image-stack horizontal-stack">
+                        <img src="../Confeitaria/FOTOS/PERSO2.png" alt="Brigadeiros variados." class="layer-img-horizontal">
+                    </div>
+                    
+                    <div class="selection-box" data-product-type="doces">
+                        
+                        <label for="doce-peso">Peso por Doce (Gramas):</label>
+                        <select id="doce-peso" required>
+                            <option value="">Selecione o peso</option>
+                            <option value="5">5g (Mini)</option>
+                            <option value="10">10g (Padrão)</option>
+                            <option value="15">15g (Maxi)</option>
+                            <option value="20">20g (Grande)</option>
+                        </select>
+
+                        <label for="doce-tipo">Tipo de Doce:</label>
+                        <select id="doce-tipo" required>
+                            <option value="">Selecione o tipo base</option>
+                            <option value="Brigadeiro">Brigadeiro Gourmet</option>
+                            <option value="MiniTrufa">Mini Trufa</option>
+                            <option value="Camafeu">Camafeu</option>
+                            <option value="Macaron">Macaron</option>
+                            <option value="Beijinho">Beijinho</option>
+                        </select>
+
+                        <label for="doce-sabor">Sabor/Recheio:</label>
+                        <select id="doce-sabor" required>
+                            <option value="">Selecione o sabor</option>
+                            <option value="Chocolate">Chocolate Clássico</option>
+                            <option value="Ninho">Ninho com Nutella</option>
+                            <option value="Pistache">Pistache</option>
+                            <option value="Coco">Coco Queimado</option>
+                            <option value="Maracuja">Maracujá</option>
+                            <option value="Morango">Morango</option>
+                        </select>
+                        
+                        <label for="doce-decoracao">Decoração:</label>
+                        <select id="doce-decoracao" required>
+                            <option value="">Selecione a decoração</option>
+                            <option value="Granulado">Granulado Belga</option>
+                            <option value="FolhaOuro">Folha de Ouro</option>
+                            <option value="Fruta">Fruta Seca</option>
+                            <option value="Nozes">Nozes Picadas</option>
+                            <option value="CocoRalado">Coco Ralado</option>
+                        </select>
+                        
+                        <label for="doce-quantidade">Quantidade (em dezenas):</label>
+                        <input type="number" id="doce-quantidade" min="10" max="100" step="10" value="10" required>
+                        
+                        <div class="price-display">
+                            <span>Preço Estimado:</span>
+                            <span id="price-doces" class="calculated-price">R$ 0,00</span>
+                        </div>
+
+                        <button class="btn btn-carrinho" id="add-doces-carrinho" disabled>Adicionar Doces ao Carrinho</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="personalization-section" id="sobremesas-caseiras">
+                <h2>3. Escolha Sua Sobremesa Caseira</h2>
+                <div class="personalization-grid">
+                    <div class="image-stack horizontal-stack">
+                        <img src="../Confeitaria/FOTOS/PERSO3.png" alt="Torta de limão fatiada." class="layer-img-horizontal">
+                    </div>
+
+                    <div class="selection-box" data-product-type="sobremesa">
+                        <label for="sobremesa-tipo">Tipo de Sobremesa:</label>
+                        <select id="sobremesa-tipo" required>
+                            <option value="">Selecione o tipo</option>
+                            <option value="Pavê">Pavê Clássico</option>
+                            <option value="Mousse">Mousse</option>
+                            <option value="Torta">Torta Inteira</option>
+                            <option value="BoloPote">Bolo de Pote</option>
+                            <option value="Pudim">Pudim</option>
+                        </select>
+
+                        <label for="sobremesa-sabor">Sabor/Base:</label>
+                        <select id="sobremesa-sabor" required>
+                            <option value="">Selecione o sabor</option>
+                            <option value="Chocolate">Chocolate</option>
+                            <option value="Baunilha">Baunilha</option>
+                            <option value="Frutas">Frutas Vermelhas</option>
+                            <option value="Coco">Coco Cremoso</option>
+                            <option value="Maracuja">Maracujá</option>
+                            <option value="Limão">Limão Siciliano</option>
+                        </select>
+                        
+                        <label for="sobremesa-tamanho">Tamanho/Porções:</label>
+                        <select id="sobremesa-tamanho" required>
+                            <option value="">Selecione o tamanho</option>
+                            <option value="Pequena">Pequena (4-6 porções)</option>
+                            <option value="Média">Média (8-10 porções)</option>
+                            <option value="Grande">Grande (12-15 porções)</option>
+                            <option value="ExtraG">Extra Grande</option>
+                        </select>
+                        
+                        <label for="sobremesa-quantidade">Quantidade:</label>
+                        <input type="number" id="sobremesa-quantidade" min="1" max="5" value="1" required>
+
+                        <div class="price-display">
+                            <span>Preço Estimado:</span>
+                            <span id="price-sobremesa" class="calculated-price">R$ 0,00</span>
+                        </div>
+
+                        <button class="btn btn-carrinho" id="add-sobremesa-carrinho" disabled>Adicionar Sobremesa ao Carrinho</button>
+                    </div>
+                </div>
+            </section>
+
+             <section class="cta-section">
+                <p class="cta-phrase">
+                    Não encontrou a opção perfeita ou precisa de um pedido especial?
+                </p>
+                <a href="empresa.html" class="btn btn-primary">
+                    Personalize seu Pedido Agora
+                </a>
+                <p class="corporativo-info">
+                    <br>
+                Empresas que precisam de doces personalizados para eventos corporativos também podem nos contatar diretamente.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://wa.me/5511995553312" target="_blank" aria-label="WhatsApp Camila Ferreira">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/confeitariacamilaferreira" target="_blank" aria-label="Instagram Camila Ferreira">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; 2023 Confeitaria Camila Ferreira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <a href="#" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../Confeitaria/JS/script.js"></script>
+    <script src="../Confeitaria/JS/personalizar.js"></script> 
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>

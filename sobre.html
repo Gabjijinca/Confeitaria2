@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Confeitaria Camila Ferreira</title>
+    
+    <link rel="stylesheet" href="../Confeitaria/CSS/style.css"> 
+    <link rel="stylesheet" href="../Confeitaria/CSS/sobre.css"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <audio id="background-audio" loop autoplay muted>
+        <source src="../Confeitaria/MUSICAS/en-resa-genom-vasttrafiks-fonster-jazz-bgm-254221.mp3" type="audio/mp3">
+    </audio>
+
+    <button id="toggle-audio-btn" aria-label="Ligar/Desligar Música">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo-link">
+                <img src="../Confeitaria/FOTOS/LOGO1.png" alt="Logo Camila Ferreira Confeitaria" class="logo-img">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personalizar.html">Personalizar</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="carrinho.html" class="carrinho-link">
+                    <i class="fas fa-shopping-cart carrinho-icon"></i></a></li>
+            </ul>
+        </nav>
+        
+        <button id="accessibility-btn" aria-label="Menu de Acessibilidade">
+            <i class="fas fa-wheelchair"></i>
+        </button>
+        
+        <aside id="accessibility-sidebar">
+            <h4>Opções de Acessibilidade</h4>
+            <button id="close-sidebar-btn" aria-label="Fechar menu">X</button>
+            <div class="acessibility-options">
+                <button class="acessibility-option-btn" data-action="contrast" aria-label="Alto Contraste"><i class="fas fa-adjust"></i> Alto Contraste</button>
+                <button class="acessibility-option-btn" data-action="font-size-up" aria-label="Aumentar Fonte"><i class="fas fa-plus"></i> Aumentar Fonte</button>
+                <button class="acessibility-option-btn" data-action="font-size-down" aria-label="Diminuir Fonte"><i class="fas fa-minus"></i> Diminuir Fonte</button>
+                <button class="acessibility-option-btn" data-action="grayscale" aria-label="Escala de Cinza"><i class="fas fa-tint-slash"></i> Preto e Branco</button>
+                <button class="acessibility-option-btn" data-action="speech" aria-label="Ativar Leitura por Voz"><i class="fas fa-volume-up"></i> Leitura por Voz</button>
+            </div>
+        </aside>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <header class="page-header">
+                <h1>A História da Confeitaria</h1>
+                <p>Descubra o toque artesanal e a paixão por ingredientes que transformaram a confeitaria em um negócio gourmet de sucesso.</p>
+                <BR>
+            </header>
+            
+            <section class="sobre-section history-section">
+                <div class="sobre-content">
+                    <h2>Nossa Doce Evolução</h2>
+                    <p>Tudo começou na cozinha de casa, com encomendas feitas pelo WhatsApp e Instagram. O que era um hobby virou um negócio próspero graças à demanda por doces sofisticados, bolos de festa personalizados e sobremesas que priorizam a qualidade do sabor e a beleza estética.</p>
+                    <p>A transição para o site foi um passo natural, impulsionado pela Chef Camila Ferreira para profissionalizar as vendas, automatizar pedidos e expandir o atendimento a eventos corporativos e clientes em busca de um presente diferenciado e gourmet.</p>
+                    <a href="catalogo.html" class="btn btn-secondary">Ver nossas Delícias</a>
+                </div>
+                <div class="sobre-image">
+                    <img src="../Confeitaria/FOTOS/SOBRE2.png" alt="Foto da Chef Camila Ferreira trabalhando em sua cozinha profissional."/>
+                </div>
+            </section>
+            
+            <section class="sobre-section m-v-v-section">
+                <div class="m-v-v-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Nossa Missão</h3>
+                    <p>Transformar momentos especiais — festas, eventos e celebrações cotidianas — em experiências inesquecíveis através da confeitaria gourmet artesanal de alta qualidade.</p>
+                </div>
+                
+                <div class="m-v-v-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Nossa Visão</h3>
+                    <p>Ser a confeitaria gourmet de referência no mercado, reconhecida pela excelência, inovação constante em design e, acima de tudo, pela paixão pelo detalhe e pelo sabor inigualável.</p>
+                </div>
+                
+                <div class="m-v-v-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Nossos Valores</h3>
+                    <ul>
+                        <li>Excelência: Comprometimento com os melhores ingredientes.</li>
+                        <li>Personalização: Foco total na visão e desejo do cliente.</li>
+                        <li>Paixão: O ingrediente secreto em cada receita.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="sobre-section chef-section">
+                 <div class="sobre-image chef-photo">
+                    <img src="../Confeitaria/FOTOS/SOBRE1.png" alt="Retrato da Chef e Fundadora, Camila Ferreira."/>
+                </div>
+                <div class="sobre-content">
+                    <h2>Camila Ferreira: A Chef por Trás da Marca</h2>
+                    <p>Aos 35 anos, Camila Ferreira não é apenas uma empreendedora; é a Chef e a alma criativa por trás de cada receita. Com formação em Gastronomia e especialização em Pâtisserie, ela une a técnica clássica com a paixão por ingredientes brasileiros.</p>
+                    <p>Seu objetivo é elevar o nível da confeitaria gourmet, oferecendo produtos que são visualmente deslumbrantes e, acima de tudo, incrivelmente saborosos.</p>
+                    <a href="https://wa.me/5511995553312" class="btn btn-primary">Fale com a Chef</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://wa.me/5511995553312" target="_blank" aria-label="WhatsApp Camila Ferreira">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/confeitariacamilaferreira" target="_blank" aria-label="Instagram Camila Ferreira">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; 2023 Confeitaria Camila Ferreira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <a href="#" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../Confeitaria/JS/script.js"></script>
+    <script src="../Confeitaria/JS/sobre.js"></script> 
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Completo | Confeitaria Camila Ferreira</title>
+    
+    <link rel="stylesheet" href="../Confeitaria/CSS/style.css"> 
+    <link rel="stylesheet" href="../Confeitaria/CSS/catalogo.css"> 
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <audio id="background-audio" loop autoplay muted>
+        <source src="../Confeitaria/MUSICAS/en-resa-genom-vasttrafiks-fonster-jazz-bgm-254221.mp3" type="audio/mp3">
+        
+    </audio>
+
+    <button id="toggle-audio-btn" aria-label="Ligar/Desligar Música">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo-link">
+                <img src="../Confeitaria/FOTOS/LOGO1.png" alt="Logo Camila Ferreira Confeitaria" class="logo-img">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="personalizar.html">Personalizar</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="carrinho.html" class="carrinho-link">
+                    <i class="fas fa-shopping-cart carrinho-icon"></i></a></li>
+            </ul>
+        </nav>
+        
+        <button id="accessibility-btn" aria-label="Menu de Acessibilidade">
+            <i class="fas fa-wheelchair"></i>
+        </button>
+        
+        <aside id="accessibility-sidebar">
+            <h4>Opções de Acessibilidade</h4>
+            <button id="close-sidebar-btn" aria-label="Fechar menu">X</button>
+            <div class="acessibility-options">
+                <button class="acessibility-option-btn" data-action="contrast" aria-label="Alto Contraste">
+                    <i class="fas fa-adjust"></i> Alto Contraste
+                </button>
+                <button class="acessibility-option-btn" data-action="font-size-up" aria-label="Aumentar Fonte">
+                    <i class="fas fa-plus"></i> Aumentar Fonte
+                </button>
+                <button class="acessibility-option-btn" data-action="font-size-down" aria-label="Diminuir Fonte">
+                    <i class="fas fa-minus"></i> Diminuir Fonte
+                </button>
+                <button class="acessibility-option-btn" data-action="grayscale" aria-label="Escala de Cinza">
+                    <i class="fas fa-tint-slash"></i> Preto e Branco
+                </button>
+                <button class="acessibility-option-btn" data-action="speech" aria-label="Ativar Leitura por Voz">
+                    <i class="fas fa-volume-up"></i> Leitura por Voz
+                </button>
+            </div>
+        </aside>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <header class="page-header">
+                <h1>Nosso catálogo de delícias</h1><br>
+                <p>Explore nossa coleção completa de bolos, doces e sobremesas artesanais. Tudo feito sob encomenda com a qualidade de uma chef.</p>
+            <br>
+            </header>
+            
+            <section class="product-category" id="bolos">
+                <h2>Bolos mais amados</h2>
+                <div class="product-grid-3x2">
+                    <a href="produto-bolo1.html" class="product-link">
+                        <div class="product-card">
+                            <img src="../Confeitaria/FOTOS/BOLO1.png" alt="Bolo Red Velvet">
+                            <div class="product-info">
+                                <h3>Bolo Red Velvet</h3>
+                                <p class="description">Cobertura de cream cheese e massa suave. Simples e chique.</p>
+                                <div class="price-action">
+                                    <span class="price">R$ 150,00</span>
+                                    <button class="btn-carrinho" data-product="red-velvet"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="produto-bolo2.html" class="product-link">
+                        <div class="product-card">
+                            <img src="../Confeitaria/FOTOS/BOLO2.png" alt="Bolo de Chocolate Intenso">
+                            <div class="product-info">
+                                <h3>Chocolate Belga</h3>
+                                <p class="description">Intensidade e cremosidade em cada camada de chocolate belga.</p>
+                                <div class="price-action">
+                                    <span class="price">R$ 180,00</span>
+                                    <button class="btn-carrinho" data-product="chocolate"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="produto-bolo3.html" class="product-link">
+                        <div class="product-card">
+                            <img src="../Confeitaria/FOTOS/BOLO3.png" alt="Bolo de Casamento Clássico">
+                            <div class="product-info">
+                                <h3>Bolo de Casamento</h3>
+                                <p class="description">Design elegante com detalhes dourados. Crie o seu sabor!</p>
+                                <div class="price-action">
+                                    <span class="price">R$ 550,00</span>
+                                    <button class="btn-carrinho" data-product="casamento"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="produto-bolo4.html" class="product-link">
+                        <div class="product-card">
+                            <img src="../Confeitaria/FOTOS/BOLO4.png" alt="Bolo de Limão Siciliano">
+                            <div class="product-info">
+                                <h3>Limão Siciliano</h3>
+                                <p class="description">Leve, azedo e refrescante. Cobertura de merengue maçaricado.</p>
+                                <div class="price-action">
+                                    <span class="price">R$ 140,00</span>
+                                    <button class="btn-carrinho" data-product="limao"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="produto-bolo5.html" class="product-link">
+                        <div class="product-card">
+                            <img src="../Confeitaria/FOTOS/BOLO5.png" alt="Bolo com Frutas Frescas">
+                            <div class="product-info">
+                                <h3>Bolo com Frutas</h3>
+                                <p class="description">Massa fofa recheada com frutas da estação e chantilly.</p>
+                                <div class="price-action">
+                                    <span class="price">R$ 165,00</span>
+                                    <button class="btn-carrinho" data-product="frutas"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="produto-bolo6.html" class="product-link">
+                        <div class="product-card">
+                            <img src="../Confeitaria/FOTOS/BOLO6.png" alt="Naked Cake Rústico">
+                            <div class="product-info">
+                                <h3>Naked Cake</h3>
+                                <p class="description">Estilo rústico elegante com frutas vermelhas e açúcar de confeiteiro.</p>
+                                <div class="price-action">
+                                    <span class="price">R$ 190,00</span>
+                                    <button class="btn-carrinho" data-product="naked"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+           <section class="product-category" id="doces-classicos">
+    <h2>Doces Clássicos e Finos</h2>
+    <div class="product-grid-3x2">
+        
+        <a href="produto-mac1.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/DOCE1.png" alt="Macarons coloridos em torre, exibindo recheios cremosos.">
+                <div class="product-info">
+                    <h3>Macarons Clássicos</h3>
+                    <p class="description">Seleção dos nossos sabores mais vendidos: Pistache, Chocolate e Baunilha. (12 un.)</p>
+                    <div class="price-action">
+                        <span class="price">R$ 80,00</span>
+                        <button class="btn-carrinho" data-product="macaron-mix"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produto-brigadeiro.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/DOCE2.png" alt="Brigadeiros gourmet de chocolate escuro com granulado belga.">
+                <div class="product-info">
+                    <h3>Brigadeiro Gourmet</h3>
+                    <p class="description">Feito com chocolate belga 50% cacau. O clássico em versão ultra-sofisticada. (Caixa 20 un.)</p>
+                    <div class="price-action">
+                        <span class="price">R$ 60,00</span>
+                        <button class="btn-carrinho" data-product="brigadeiro-gourmet"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produto-camafeu.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/DOCE3.png" alt="Camafeu de nozes coberto com chocolate branco.">
+                <div class="product-info">
+                    <h3>Camafeu de Nozes</h3>
+                    <p class="description">Doce fino e elegante. Recheio cremoso de nozes com cobertura de fondant. (Unidade)</p>
+                    <div class="price-action">
+                        <span class="price">R$ 5,50</span>
+                        <button class="btn-carrinho" data-product="camafeu"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produto-trufa.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/DOCE4.png" alt="Mini trufas de chocolate polvilhadas com cacau.">
+                <div class="product-info">
+                    <h3>Mini Trufas</h3>
+                    <p class="description">Casquinha fina de chocolate e recheio cremoso e intenso. Perfeito para festas. (Caixa 10 un.)</p>
+                    <div class="price-action">
+                        <span class="price">R$ 55,00</span>
+                        <button class="btn-carrinho" data-product="mini-trufa"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="produto-cupcake.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/DOCE5.png" alt="Mini cupcakes com cobertura de chantilly e granulado.">
+                <div class="product-info">
+                    <h3>Mini Cupcakes</h3>
+                    <p class="description">Massa fofa de baunilha com cobertura de buttercream ou chantilly. Personalize a cor!</p>
+                    <div class="price-action">
+                        <span class="price">R$ 6,00 (Unidade)</span>
+                        <button class="btn-carrinho" data-product="mini-cupcake"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produto-bombom.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/DOCE6.png" alt="Bombom de chocolate com recheio de cereja.">
+                <div class="product-info">
+                    <h3>Bombom de Cereja</h3>
+                    <p class="description">Chocolate amargo e cereja inteira ao licor. O clássico atemporal. (Unidade)</p>
+                    <div class="price-action">
+                        <span class="price">R$ 7,00</span>
+                        <button class="btn-carrinho" data-product="bombom-cereja"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+            <section class="product-category" id="sobremesas">
+    <h2>Sobremesas Artesanais</h2>
+    <div class="product-grid-3x2">
+        
+        <a href="produto-pave1.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/PAVE1.png" alt="Pavê de Chocolate com Crocante de Avelã em camadas.">
+                <div class="product-info">
+                    <h3>Pavê Crocante</h3>
+                    <p class="description">Camadas cremosas de chocolate e crocante de avelãs torradas. Pote de 500g.</p>
+                    <div class="price-action">
+                        <span class="price">R$ 95,00</span>
+                        <button class="btn-carrinho" data-product="pave-avelã"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produto-sobremesa2.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/PAVE2.png" alt="Torta de limão com merengue.">
+                <div class="product-info">
+                    <h3>Torta de Limão</h3>
+                    <p class="description">Base de biscoito amanteigado, recheio cítrico e merengue italiano maçaricado.</p>
+                    <div class="price-action">
+                        <span class="price">R$ 110,00</span>
+                        <button class="btn-carrinho" data-product="torta-limao"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produto-sobremesa3.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/PAVE3.png" alt="Cheesecake com calda de frutas vermelhas.">
+                <div class="product-info">
+                    <h3>Cheesecake Clássico</h3>
+                    <p class="description">Base de graham cracker e cobertura generosa de frutas vermelhas frescas.</p>
+                    <div class="price-action">
+                        <span class="price">R$ 130,00</span>
+                        <button class="btn-carrinho" data-product="cheesecake"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produto-sobremesa4.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/PAVE4.png" alt="Mousse de maracujá em taça.">
+                <div class="product-info">
+                    <h3>Mousse de Maracujá</h3>
+                    <p class="description">Mousse leve e aerada, com a acidez natural do maracujá fresco. (6 porções)</p>
+                    <div class="price-action">
+                        <span class="price">R$ 85,00</span>
+                        <button class="btn-carrinho" data-product="mousse-maracuja"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produto-sobremesa5.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/PAVE5.png" alt="Brownie de chocolate com sorvete e calda.">
+                <div class="product-info">
+                    <h3>Brownie Trufado</h3>
+                    <p class="description">Ultra-úmido, feito com chocolate amargo e nozes. Ideal para servir quente.</p>
+                    <div class="price-action">
+                        <span class="price">R$ 75,00 (Caixa 8 un.)</span>
+                        <button class="btn-carrinho" data-product="brownie-trufado"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produto-sobremesa6.html" class="product-link">
+            <div class="product-card">
+                <img src="../Confeitaria/FOTOS/PAVE6.png" alt="Tiramisu polvilhado com cacau.">
+                <div class="product-info">
+                    <h3>Tiramisu Clássico</h3>
+                    <p class="description">Feito com queijo Mascarpone, café expresso e biscoitos champagne de produção própria.</p>
+                    <div class="price-action">
+                        <span class="price">R$ 120,00</span>
+                        <button class="btn-carrinho" data-product="tiramisu"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+            <section class="cta-section">
+                <p class="cta-phrase">
+                    Não encontrou a opção perfeita ou precisa de um pedido especial?
+                </p>
+                <a href="empresa.html" class="btn btn-primary">
+                    Personalize seu Pedido Agora
+                </a>
+                <p class="corporativo-info">
+                    <br>
+                Empresas que precisam de doces personalizados para eventos corporativos também podem nos contatar diretamente.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://wa.me/5511995553312" target="_blank" aria-label="WhatsApp Camila Ferreira">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/confeitariacamilaferreira" target="_blank" aria-label="Instagram Camila Ferreira">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; 2023 Confeitaria Camila Ferreira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <a href="#" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+<script src="../Confeitaria/JS/script.js"></script>
+<script src="../Confeitaria/JS/catalogo.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
