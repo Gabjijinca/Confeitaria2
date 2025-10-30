@@ -1,0 +1,188 @@
+
+
+main {
+    padding-top: 90px; /* Compensa apenas o header fixo principal */
+}
+
+/* Estilo do cabeçalho principal da página (dentro do <main>) */
+.page-header {
+    /* Garante que o cabeçalho role com a página */
+    position: static !important; 
+    
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    max-width: 1160px; /* Mantém sua largura desejada */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* ======================================= */
+/* BARRA DE NAVEGAÇÃO INTERNA (Quick Nav) */
+/* ======================================= */
+
+.quick-nav {
+    /* CORREÇÃO: Posição estática e largura total para rolar com a página */
+    position: static; 
+    width: 100%;
+    
+    /* Estilo visual e espaçamento */
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+    margin-bottom: 40px; /* Espaço entre a barra e a primeira seção */
+    
+    /* Layout horizontal */
+    display: flex;
+    justify-content: center; 
+    gap: 40px;
+}
+
+.quick-nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.quick-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent; 
+    transition: all 0.3s;
+}
+
+.quick-nav a:hover,
+.quick-nav a.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+/* ======================================= */
+/* ESTILO DAS SEÇÕES DE PERSONALIZAÇÃO */
+/* ======================================= */
+
+.personalization-section {
+    margin-bottom: 80px;
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
+}
+
+.personalization-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+}
+
+/* Layout de Duas Colunas (Imagem e Seleção) */
+.personalization-grid {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start; 
+}
+
+.image-stack {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+    text-align: center; 
+}
+
+.image-stack img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.horizontal-stack {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.layer-img-horizontal {
+    width: 30%; 
+    height: auto;
+    border-radius: 8px;
+}
+
+.selection-box {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+}
+
+.selection-box label {
+    display: block;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.selection-box select,
+.selection-box input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: white;
+}
+
+.btn-carrinho {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-carrinho:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Adicione este estilo ao seu personalizar.css */
+
+.price-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.calculated-price {
+    color: var(--accent-color); /* Usa a cor dourada para destaque */
+    font-size: 1.3em;
+    font-weight: 700;
+}

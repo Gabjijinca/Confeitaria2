@@ -1,0 +1,145 @@
+
+
+main {
+    padding-top: 90px; 
+}
+
+/* Estilo do cabeçalho da página */
+.page-header {
+    position: static !important;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    color: #4a4a4a;
+}
+.page-header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Layout Principal (2 Colunas) */
+.corporate-form-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Coluna de Informações e Vantagens */
+.corporate-info-box {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.corporate-info-box h2 {
+    font-size: 1.8em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.corporate-info-box ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.corporate-info-box li {
+    padding: 8px 0;
+    font-weight: 600;
+    color: #555;
+}
+
+.corporate-info-box .fas {
+    color: green;
+    margin-right: 10px;
+}
+
+/* Formulário de Encomenda */
+.corporate-form {
+    flex: 1;
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.corporate-form h3 {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.corporate-form input[type="text"],
+.corporate-form input[type="email"],
+.corporate-form input[type="date"],
+.corporate-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Estilo do Campo de Upload */
+.file-upload-group {
+    border: 1px dashed var(--primary-color);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.file-upload-group input[type="file"] {
+    border: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.file-tip {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 5px;
+}
+
+.corporate-submit-btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+.cta-contato {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.cta-contato a {
+    color: var(--accent-color);
+    font-weight: 700;
+    text-decoration: none;
+}

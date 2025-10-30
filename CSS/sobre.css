@@ -1,0 +1,111 @@
+
+main {
+    padding-top: 90px; 
+}
+
+/* Estilo do cabeçalho principal da página (dentro do <main>) */
+.page-header {
+    /* CORREÇÃO: Força o elemento a rolar com a página */
+    position: static !important; 
+    
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+.page-header h1 {
+    font-size: 3em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Estilo das Seções de Conteúdo (História e Chef) */
+.sobre-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+.sobre-section h2 {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.sobre-content {
+    flex: 1; /* Ocupa metade do espaço */
+    max-width: 50%;
+}
+
+.sobre-image {
+    flex: 1; /* Ocupa a outra metade */
+    max-width: 50%;
+}
+
+.sobre-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Inverte a ordem das colunas para a seção da Chef */
+.chef-section {
+    flex-direction: row-reverse;
+}
+
+
+/* SEÇÃO MISSÃO, VISÃO E VALORES (M-V-V) */
+.m-v-v-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 60px 40px;
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+.m-v-v-card {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.m-v-v-card i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.m-v-v-card h3 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.m-v-v-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.m-v-v-card li {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}

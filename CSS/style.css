@@ -1,0 +1,727 @@
+:root {
+    --primary-color: #D4B48A;
+    --secondary-color: #F8F8F8;
+    --text-color: #4A4A4A;
+    --accent-color: #B59367;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ======================================= */
+/* HEADER & NAV GERAL (FIXO) */
+/* ======================================= */
+header {
+    /* ... (mantenha o código existente) ... */
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Novo container Flexbox para alinhar logo e menu */
+header nav.container {
+    display: flex;
+    justify-content: space-between; /* Alinha o logo à esquerda e a navegação à direita/centro */
+    align-items: center;
+    padding: 5px 20px; /* Adiciona padding lateral para afastar logo/menu das bordas */
+    height: 50px; /* Define uma altura clara para o header */
+}
+
+/* Estilo do Logo */
+.logo-link {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Ocupa a altura do nav.container */
+    padding: 0;
+    margin-right: 10px; /* Adiciona um espaço entre o logo e o menu */
+}
+
+.logo-img {
+    height: 70px; /* Define um tamanho adequado para a imagem do logo */
+    width: auto;
+}
+
+/* Centralização do Menu */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin: 0; 
+    /* Garante que o menu principal fique centralizado horizontalmente no espaço restante */
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* ... (O restante do CSS é mantido) ... */
+
+
+
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    /* REMOVA: background: url('../FOTOS/IMG1.png') no-repeat center center/cover; */
+    height: 80vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    /* Adicione overflow: hidden; para que os slides fiquem dentro do container */
+    overflow: hidden; 
+}
+
+.hero-content {
+    /* ... estilos existentes (z-index, text-align: center) ... */
+    
+    /* Se a sua tag <main> tem padding-top: 90px;, use o mesmo valor negativo aqui: */
+    margin-top: 140px; 
+}
+
+/* Container que gerencia a área do slideshow */
+.slideshow-container {
+    /* ... (mantenha os estilos existentes) ... */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Importante para esconder os slides fora da tela */
+}
+
+/* Estilo de cada slide individual */
+.mySlides {
+    position: absolute; /* Permite que os slides fiquem lado a lado */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-size: cover;
+    background-position: center;
+    
+    /* Configuração da Transição de Deslizamento */
+    transition: transform 4s ease-in-out, opacity 4s ease-in-out;
+    
+    /* Esconde o slide fora da tela para a direita */
+    transform: translateX(70%); 
+    opacity: 0;
+}
+
+/* Classe que será adicionada pelo JavaScript para MOSTRAR o slide na tela */
+.mySlides.active {
+    transform: translateX(0); /* Move para a posição central (0) */
+    opacity: 1;
+}
+
+/* Classe para o slide que está SAINDO (opcional, para criar um efeito mais suave) */
+.mySlides.prev {
+    /* Move o slide anterior para fora da tela pela esquerda */
+    transform: translateX(-100%); 
+    opacity: 0;
+}
+
+/* Aplicação das Imagens de Fundo nos Slides */
+.slideshow-container .mySlides:nth-child(1) {
+    background-image: url('../FOTOS/IMG1.png'); /* Primeira imagem */
+}
+
+.slideshow-container .mySlides:nth-child(2) {
+    background-image: url('../FOTOS/IMG3.png'); /* Segunda imagem (crie esta!) */
+}
+
+.slideshow-container .mySlides:nth-child(3) {
+    background-image: url('../FOTOS/IMG4.png'); /* Terceira imagem (crie esta!) */
+}
+
+/* Garante que o conteúdo do Hero (texto e botão) fique na frente dos slides */
+.hero-content {
+    z-index: 10;
+    position: relative; 
+    /* ... mantenha os estilos de texto e cores que você já tem ... */
+}
+
+/* Adiciona o overlay a CADA SLIDE */
+.mySlides::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* O overlay que você deseja */
+    background: rgba(0, 0, 0, 0.4); 
+
+    /* Garante que o overlay fique SOBRE a imagem de fundo do slide */
+    z-index: 1; 
+}
+
+/* Importante: Garante que o conteúdo de texto fique acima do overlay */
+.hero-content {
+    z-index: 10; /* Z-index maior que o do overlay (1) */
+    position: relative; /* Essencial para que o z-index funcione */
+    /* ... outros estilos ... */
+}
+
+.hero-content {
+    z-index: 10;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.btn {
+    background: var(--accent-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background: #A07F5B;
+}
+
+/* Features Section */
+.features-section {
+    background-color: white;
+    padding: 35px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.features-section .container {
+    display: flex;
+    justify-content: center;
+}
+
+.feature-item {
+    width: 30%;
+}
+
+.feature-item img {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/* Products Preview Section */
+.products-preview {
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Estilo do Cabeçalho Geral da Prévia de Produtos */
+.products-header {
+    max-width: 900px; /* Limita a largura do texto para melhor leitura */
+    margin: 0 auto 50px auto; /* Centraliza e adiciona margem inferior */
+    text-align: center;
+}
+
+.products-header h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.products-header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Opcional: Garante que o grid de produtos (os cards) fique com bom espaçamento */
+.products-preview .container {
+    display: flex;
+    flex-direction: column; /* Organiza o cabeçalho e o grid em coluna */
+    align-items: center; /* Centraliza todo o bloco de conteúdo */
+}
+
+.products-grid { /* Novo seletor para organizar os cards */
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Aumentei o gap para melhor espaçamento entre os cards */
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Garante que a descrição do produto seja mais sutil */
+.product-info .product-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.products-preview .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    height: 100%;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+
+
+
+
+
+/* Estilo para o Link do Produto */
+.product-link {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Garante que o texto dentro do card mantenha a cor padrão */
+    display: block; /* Garante que o link ocupe todo o espaço do card */
+     height: 100%;
+}
+
+/* Efeito Hover Aprimorado (aplica o efeito de subir no link, não apenas no card) */
+.product-link:hover .product-card {
+    transform: translateY(-5px); /* Faz o card subir um pouco */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Aumenta a sombra */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Opcional: Efeito no Título */
+.product-link:hover .product-info h3 {
+    color: var(--accent-color); /* Muda a cor do título ao passar o mouse */
+    transition: color 0.3s;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    background: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.icon-feature {
+    /* 1. Tamanho do Ícone (Aumentado para 40px) */
+    font-size: 30px; 
+    color: var(--accent-color); 
+    
+    /* 2. Tamanho e centralização do Círculo Dourado (Aumentado para 80px) */
+    display: block;
+    width: 40px;  /* Novo tamanho do círculo */
+    height: 40px; /* Novo tamanho do círculo */
+    line-height: 30px; /* Centraliza verticalmente o ícone dentro do novo círculo */
+    margin: 0 auto 10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    /* O padding deve ser ajustado para manter o ícone bem centralizado, experimente 10px ou 15px */
+    padding: 10px; 
+    box-sizing: content-box; 
+}
+
+/* Novo estilo para remover o sublinhado dos links */
+.feature-link {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Garante que a cor do texto seja herdada da seção, não a cor padrão azul do link */
+}
+
+/* Opcional: Adicionar um efeito hover para indicar que é clicável */
+.feature-link:hover .icon-feature {
+    transform: scale(1.1); /* Faz o ícone crescer um pouco ao passar o mouse */
+    transition: transform 0.3s;
+}
+
+.feature-link:hover h3 {
+    color: var(--accent-color); /* Muda a cor do título ao passar o mouse */
+    transition: color 0.3s;
+}
+
+.features-section .container {
+    display: flex; /* ESSENCIAL: Garante que os filhos fiquem lado a lado */
+    justify-content: space-around; /* Distribui o espaço entre os itens */
+}
+.feature-link {
+    text-decoration: none;
+    color: inherit;
+    /* Adicione estas propriedades para que o link respeite o Flexbox do container */
+    display: block; 
+    text-align: center; /* Centraliza o conteúdo dentro de cada link */
+}
+
+.feature-item {
+    /* Mantenha o estilo do item aqui, mas certifique-se de que ele não tem width: 100% */
+    width: 100%; /* Remova qualquer width: 100% que possa ter sido adicionado aqui */
+}
+
+/* Estilo e Posicionamento Fixo da Seta */
+#back-to-top {
+    position: fixed; /* Fixa o elemento na tela */
+    bottom: 30px; /* Distância da parte inferior da tela */
+    right: 30px; /* Distância da lateral direita da tela */
+    z-index: 999; /* Garante que fique acima de outros elementos */
+    
+    /* Estilo do Botão */
+    display: none; /* ESCONDIDO POR PADRÃO: será exibido pelo JavaScript */
+    background-color: var(--accent-color); 
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* Centraliza o ícone verticalmente */
+    text-align: center;
+    border-radius: 50%; /* Transforma em círculo */
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #A07F5B; /* Um pouco mais escuro no hover */
+}
+
+/* Estilo para o Container dos Ícones */
+footer .social-icons {
+    margin-bottom: 15px; /* Espaçamento entre os ícones e o texto de copyright */
+}
+
+/* Estilo dos Links e Ícones */
+footer .social-icons a {
+    color: white; /* Cor branca para contraste no fundo escuro */
+    font-size: 24px; /* Tamanho do ícone */
+    margin: 0 10px; /* Espaçamento entre o WhatsApp e o Instagram */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Efeito Hover (Opcional) */
+footer .social-icons a:hover {
+    color: var(--primary-color); /* Muda para a cor dourada/accent ao passar o mouse */
+}
+
+/* Garante que o container do footer centralize todo o seu conteúdo */
+footer .container {
+    display: flex;
+    flex-direction: column; /* Organiza os filhos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* Estilo e Posicionamento Fixo do Botão */
+#accessibility-btn {
+    position: fixed;
+    
+    /* CORREÇÃO: Centralização Vertical no centro da área fixa */
+    top: 8px; /* Ajuste para descer o botão para a área visível do header */
+    transform: translateY(0); /* REMOVA o -50% se ele estiver causando problemas */
+    
+    right: 20px; /* Distância da lateral direita */
+    z-index: 1001; 
+    
+    /* Estilo Discreto */
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+#accessibility-btn:hover {
+    background-color: #A07F5B;
+}
+
+/* Estilo do Menu Lateral */
+#accessibility-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px; /* Largura do menu */
+    height: 100%;
+    background-color: white;
+    z-index: 1002;
+    padding: 20px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    
+    /* ESCONDE O MENU INICIALMENTE */
+    transform: translateX(100%); 
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Classe que será adicionada pelo JS para MOSTRAR o menu */
+#accessibility-sidebar.open {
+    transform: translateX(0); /* Desliza para dentro */
+}
+
+/* Estilo do botão de Fechar */
+#close-sidebar-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+/* Estilização dos botões internos (opcional) */
+.acessibility-option-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s;
+}
+.acessibility-option-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* ======================================= */
+/* ESTILOS DE ACESSIBILIDADE - ALTO CONTRASTE */
+/* ======================================= */
+
+body.high-contrast {
+    /* Fundo escuro e texto claro padrão */
+    background-color: black !important;
+    color: white !important;
+}
+
+body.high-contrast a, 
+body.high-contrast .btn {
+    /* Cores de link de alto contraste */
+    color: yellow !important; 
+    border-color: yellow !important;
+    background-color: transparent !important;
+}
+
+/* Garante que as seções de fundo branco também fiquem escuras */
+body.high-contrast .features-section,
+body.high-contrast .product-card,
+body.high-contrast header,
+body.high-contrast #accessibility-sidebar {
+    background-color: #111 !important; /* Quase preto */
+    color: white !important;
+    border-color: white !important;
+    box-shadow: none !important; /* Remove sombras para maior clareza */
+}
+
+/* Ajuste dos ícones (para ficarem amarelos) */
+body.high-contrast .carrinho-icon,
+body.high-contrast .icon-feature {
+    color: yellow !important;
+    border-color: yellow !important;
+}
+
+/* Ajuste do botão de encomendar (hero) */
+body.high-contrast .hero-content .btn {
+    background-color: yellow !important;
+    color: black !important;
+    font-weight: 700 !important;
+}
+
+/* Garante que o texto principal fique claro */
+body.high-contrast h1,
+body.high-contrast h3,
+body.high-contrast p {
+    color: white !important;
+}
+
+/* Se você tiver imagens (como o logo CF), elas podem precisar de filtro */
+body.high-contrast img {
+    /* Inverte cores de algumas imagens ou as torna em escala de cinza, ajuste conforme necessário */
+    filter: invert(100%) !important; 
+}
+
+/* ======================================= */
+/* ESTILOS DE ACESSIBILIDADE - PRETO E BRANCO */
+/* ======================================= */
+
+body.grayscale-mode {
+    /* Aplica o filtro de escala de cinza em toda a página */
+    /* IMPORTANTE: Usa o '!' para forçar a aplicação em alguns navegadores */
+    filter: grayscale(100%) !important; 
+    
+    /* Garante que a transição seja suave (opcional, mas recomendado) */
+    transition: filter 0.5s ease;
+}
+
+/* Opcional: Evita que o menu de acessibilidade fique cinza (para melhor usabilidade) */
+body.grayscale-mode #accessibility-sidebar {
+    filter: none !important; 
+}
+
+#toggle-audio-btn {
+    position: fixed;
+    /* REMOVE: top: 65px; e right: 20px; */
+    
+    /* NOVO POSICIONAMENTO: Canto Inferior Esquerdo */
+    bottom: 20px; 
+    left: 20px; 
+    
+    z-index: 1001; 
+    
+    /* Mantenha o restante do estilo do botão: */
+    background-color: transparent; 
+    color: var(--accent-color); 
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#toggle-audio-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* ======================================= */
+/* ESTILOS ADICIONADOS - DEPOIMENTOS */
+/* ======================================= */
+
+.testimonials-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f1ede8; /* Um tom off-white suave */
+}
+
+.testimonials-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: var(--text-color);
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.testimonial-card {
+    flex: 1; /* Ocupa espaço igual */
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+.testimonial-card .client-name {
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.instagram-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: white; /* Contraste com o fundo do site */
+}
+
+.instagram-section h2 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+#instagram-feed-widget {
+    margin: 40px auto;
+    max-width: 1000px; /* Limita a largura do feed */
+}
+
+
+.instagram-section .btn-secondary {
+    background-color: var(--primary-color);
+    color: white;
+}

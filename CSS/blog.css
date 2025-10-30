@@ -1,0 +1,120 @@
+
+main {
+    /* Mantém o padding-top consistente com a página de catálogo */
+    padding-top: 90px; 
+}
+
+/* Estilo do cabeçalho principal da página do Blog */
+.page-header {
+    /* Força o elemento a rolar com a página, anulando qualquer 'position: fixed' herdada */
+    position: static !important; 
+    
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Layout do Grid de Posts */
+.blog-grid {
+    display: grid;
+    /* 2 colunas para telas grandes e médias */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+/* Estilo dos Cartões de Postagem */
+.post-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: var(--text-color);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.post-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.post-info {
+    padding: 20px;
+}
+
+.post-category {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.post-info h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.post-excerpt {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.post-date {
+    font-size: 0.8em;
+    color: #999;
+}
+
+
+/* SEÇÃO FINAL CTA */
+.blog-cta-section {
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.blog-cta-section h2 {
+    font-size: 2em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.blog-cta-section .btn-primary {
+    /* Reutiliza o estilo do botão existente */
+    background: var(--accent-color);
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+}

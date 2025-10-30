@@ -1,0 +1,143 @@
+
+
+main {
+    padding-top: 90px; 
+}
+
+/* Estilo do cabeçalho principal da página */
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 20px;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Estilo das Seções de Categoria */
+.product-category {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.product-category h2 {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+}
+
+/* Layout do Grid 3x2 */
+.product-grid-3x2 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;
+    gap: 30px; /* Espaçamento uniforme entre todos os cards */
+}
+
+/* Garante que os cards ocupem 1/3 da linha menos o espaçamento */
+.product-grid-3x2 .product-link {
+    flex: 0 0 calc(33.333% - 20px); /* 1/3 da largura menos o espaçamento */
+    max-width: calc(33.333% - 20px);
+    transition: transform 0.3s;
+}
+
+/* Garante que o conteúdo e a imagem preencham o card */
+.product-grid-3x2 .product-card {
+    height: 100%; /* Essencial para alinhar todos verticalmente */
+    display: flex;
+    flex-direction: column;
+}
+
+.product-grid-3x2 .product-info {
+    flex-grow: 1; /* Permite que a info cresça para empurrar o footer */
+    padding: 15px;
+    text-align: left;
+}
+
+.product-grid-3x2 .description {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Empurra o preço para o rodapé do card */
+}
+
+/* Estilo da área de Preço e Ação (Adicionar ao Carrinho) */
+.price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.btn-carrinho {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-carrinho:hover {
+    background-color: #A07F5B;
+}
+
+
+/* SEÇÃO FINAL DE CTA */
+.cta-section {
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.cta-phrase {
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.corporativo-info {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Reutilizando o estilo do botão existente */
+.cta-section .btn-primary {
+    background: var(--accent-color);
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+/* Estilo do cabeçalho principal da página de catálogo */
+.page-header {
+    /* Garante que o header da página role com o conteúdo */
+    position: static !important; 
+    
+    text-align: center;
+    margin-bottom: 30px;
+    
+    /* Compensação para o header fixo da navegação */
+    padding-top: 20px; 
+}

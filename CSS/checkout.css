@@ -1,0 +1,142 @@
+
+main {
+    padding-top: 90px; 
+}
+
+/* Estilo do cabeçalho da página */
+.page-header {
+    position: static !important;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+/* Layout Principal do Formulário (2 Colunas) */
+.checkout-grid {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 80px;
+    /* Centraliza o formulário na tela */
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.checkout-section {
+    flex: 1; /* Distribui o espaço igualmente */
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-section h2 {
+    color: var(--accent-color);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+/* Estilo dos Campos de Formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.flatpickr-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Estilo das Opções de Pagamento (Cards) */
+.payment-options {
+    margin-top: 20px;
+}
+
+.payment-option-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.payment-option-card:has(input:checked) {
+    background-color: #f0f0e8; /* Cor suave ao selecionar */
+    border: 1px solid var(--primary-color);
+}
+
+.payment-option-card input[type="radio"] {
+    margin-right: 15px;
+    width: auto;
+}
+
+.payment-option-card label {
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Estilo do Resumo do Pedido */
+.order-summary-box {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.order-summary-box h3 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #ddd;
+}
+
+#finalizar-compra-btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+    font-size: 1.3em;
+    background-color: var(--accent-color);
+}
+
+.terms-message {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 15px;
+    text-align: center;
+}
